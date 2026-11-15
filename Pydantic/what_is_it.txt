@@ -1,0 +1,15 @@
+Pydantic is a library that is used for setting types in Python
+
+It is mainly used in:
+- Data Validation in normal code
+- Data Validation as settings management
+
+Data Validation in normal code means like Zod etc where you can type the structure of a response or any sort of data that you expect thereby making sure we dont run into any syntactical errors.
+
+Data Validation in settings management means typing and validating application config data such as DB urls, API keys from external sources like env files
+
+It is written in Rust hence really fast.
+
+You can create custom validators, serializers and deserializers for data with it.
+
+Also a JSON Schema can be generated for any Pydantic schema - for documentation and integration with other tools
