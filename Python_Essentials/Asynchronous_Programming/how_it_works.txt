@@ -1,0 +1,16 @@
+## Asynchronous Programming in Python
+
+Normal type of programs that we write fall under synchronous programming where everything happens one after the other and there is no additional overhead.
+
+There can be multiple other scenarios where the result is not immediately availbale/takes time to be fetched and will arrive eventually that is where async programming comes into play.
+
+It is different from multiprocessing and multithreading because a single thread is used here, just that multiple tasks are created and since each tasks takes some time, the next task is taken and worked upon during the wait and so on - concurrency.
+
+Async programming in python is available by the 'async def' and 'await' syntax
+
+async def - declares a coroutine (special function that can be paused and resume later)
+await - pauses execution until the result is ready
+
+Event loop is the reason why languages can achieve the asynchronous nature, it manages and schedules the async execution.
+There is an event queue that contains all the tasks executed to be in order, each task is taken from start of the queue, put inside the event loop and executed and pushed back to the end of the queue until all tasks are over.
+Any result that will become available later is called a Future.
